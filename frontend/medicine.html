@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medicine Service - HALO</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <style>
+    /* Styles for service notice */
+    .service-notice {
+      background-color: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .service-notice .highlight {
+      font-weight: bold;
+      color: #d63333;
+    }
+
+    .btn-secondary {
+      margin-top: 10px;
+      background-color: #6c757d;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn-secondary i {
+      margin-right: 6px;
+    }
+
+    .medicine-card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 16px;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      transition: transform 0.2s;
+    }
+
+    .medicine-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .medicine-card h4 {
+      margin: 0 0 5px;
+      color: #333;
+    }
+
+    .medicine-card p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <div class="nav-brand">
+      <h1><i class="fas fa-heartbeat"></i> HALO</h1>
+      <p class="brand-subtitle">Healthcare AI Linked Operations</p>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn-primary" onclick="window.location.href='index.html'">
+        <i class="fas fa-arrow-left"></i> Back to Dashboard
+      </button>
+    </div>
+  </nav>
+
+  <main class="main-container">
+    <div class="content">
+      <div class="account-section">
+        <h2><i class="fas fa-pills"></i> Medicine Prescription Service</h2>
+
+        <!-- Service Unavailable Notice -->
+        <div class="service-notice">
+          <p><strong>Note:</strong> This service is currently <span class="highlight">not provided by HALO</span>.</p>
+          <button class="btn-secondary" onclick="window.location.href='index.html'">
+            <i class="fas fa-arrow-circle-left"></i> Return to Dashboard
+          </button>
+        </div>
+
+        <!-- Sample Medicine Cards (Disabled Look) -->
+        <div class="medicine-card">
+          <h4>Paracetamol 500mg</h4>
+          <p>For fever and mild pain relief</p>
+        </div>
+
+        <div class="medicine-card">
+          <h4>Amoxicillin 250mg</h4>
+          <p>Antibiotic for bacterial infections</p>
+        </div>
+
+        <div class="medicine-card">
+          <h4>Omeprazole 20mg</h4>
+          <p>Reduces stomach acid, treats heartburn</p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
