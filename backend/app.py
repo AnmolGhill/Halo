@@ -2,14 +2,14 @@ import os
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 from dotenv import load_dotenv
-from google import genai
+import google.generativeai as genai
 
 # Load environment variables from .env
 load_dotenv()
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 
-# Initialize Gemini client with API key
-client = genai.Client(api_key=GOOGLE_API_KEY)
+# Configure the generative AI client
+genai.configure(api_key=GOOGLE_API_KEY)
 
 # Set up Flask app to serve frontend files
 app = Flask(__name__, static_folder='../frontend')
@@ -55,10 +55,8 @@ def get_diagnosis():
     )
 
     try:
-        response = client.models.generate_content(
-            model="gemini-2.0-flash",
-            contents=prompt
-        )
+        model = genai.GenerativeModel(model_name="gemini-2.0-flash")
+        response = model.generate_content(prompt)
 
         response_text = getattr(response, 'text', None)
         if not response_text and hasattr(response, 'candidates'):
