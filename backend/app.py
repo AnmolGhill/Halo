@@ -69,5 +69,7 @@ def get_diagnosis():
     except Exception as e:
         return jsonify({'error': f"Failed to get diagnosis: {str(e)}"}), 500
 
+# ✅ Fixed section for Render:
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
