@@ -6,6 +6,37 @@
   <title>Doctor Preference - HALO</title>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <style>
+    /* Additional styles for service notice */
+    .service-notice {
+      background-color: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .service-notice .highlight {
+      font-weight: bold;
+      color: #d63333;
+    }
+
+    .btn-secondary {
+      margin-top: 10px;
+      background-color: #6c757d;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn-secondary i {
+      margin-right: 6px;
+    }
+  </style>
 </head>
 <body>
 
@@ -15,7 +46,7 @@
       <p class="brand-subtitle">Healthcare AI Linked Operations</p>
     </div>
     <div class="nav-buttons">
-      <button class="btn-primary" onclick="window.location.href='index1.html'">
+      <button class="btn-primary" onclick="window.location.href='index.html'">
         <i class="fas fa-arrow-left"></i> Back to Dashboard
       </button>
     </div>
@@ -25,6 +56,15 @@
     <div class="content">
       <div class="account-section">
         <h2><i class="fas fa-user-md"></i> Choose Your Preferred Doctor</h2>
+
+        <!-- Service Unavailable Notice -->
+        <div class="service-notice">
+          <p><strong>Note:</strong> This service is currently <span class="highlight">not provided by HALO</span>.</p>
+          <button class="btn-secondary" onclick="window.location.href='index.html'">
+            <i class="fas fa-arrow-circle-left"></i> Return to Dashboard
+          </button>
+        </div>
+
         <div class="features">
           <!-- Doctor Card 1 -->
           <div class="feature">
