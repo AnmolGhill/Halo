@@ -5,61 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HALO - Symptom Checker</title>
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Local Styles & Script -->
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <!-- Local Styles -->
+  <link rel="stylesheet" href="chatboat.css">
+
+  <!-- JavaScript Files -->
+  <script src="script.js" defer></script>       <!-- get diagonsis logic -->
+  <script src="chatboat.js" defer></script>     <!-- New animated diagnosis logic -->
 
   <style>
     body {
       font-family: 'Inter', sans-serif;
     }
-    .fade-in {
-      animation: fadeIn 0.6s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
   </style>
 </head>
-<body class="bg-gradient-to-b from-blue-50 to-green-50 text-gray-800">
+<body class="bg-blue-50 text-gray-800">
 
-  <!-- Header -->
-
-     <!-- Symptom AI -->
- <header class="bg-white shadow-md relative">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
-    <div class="text-2xl font-bold text-blue-600 whitespace-nowrap">
+ <!-- Header -->
+<header class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between flex-wrap gap-2">
+    <div class="text-base sm:text-base font-medium text-white bg-blue-700 px-3 py-1.5 rounded-md">
       🩺 Symptom AI
     </div>
-
-    <!-- Contact Doctor Button -->
-    <div>
-     <button onclick="window.location.href='doctor.html'" class="bg-green-100 px-4 py-2 rounded-xl text-green-700 text-xl font-bold flex items-center gap-2 hover:bg-green-200 transition">
-      <h5>👨‍⚕️ Contact Doctor</h5>
-     </button>
-   </div>
+    <button onclick="window.location.href='doctor.html'"
+            class="bg-green-300 hover:bg-green-400 text-green-900 text-base font-medium px-3 py-1.5 rounded-md transition shadow-sm border border-green-500">
+      👨‍⚕️ Contact Doctor
+    </button>
   </div>
 </header>
 
-
-  <!-- Main Section -->
+  <!-- Main Content -->
   <main class="max-w-3xl mx-auto px-6 py-12">
-    <div class="bg-green-50 p-8 rounded-2xl shadow-lg fade-in border border-green-100">
-      <h2 class="text-3xl font-bold text-center text-green-700 mb-6">Check Your Symptoms</h2>
+    <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 fade-in">
+      <h2 class="custom-heading mb-6">Enter Your Symptoms</h2>
 
-      <!-- Input -->
+      <!-- Symptom Input -->
       <div class="mb-4">
         <input id="symptomInput" type="text" placeholder="Type a symptom (e.g. Headache)"
-               class="w-full p-3 border border-blue-300 rounded-xl focus:ring-2 focus:ring-blue-400 outline-none"/>
+               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"/>
         <button onclick="addSymptom()"
-                class="mt-2 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-xl transition duration-300">
+                class="mt-2 add-btn">
           ➕ Add Symptom
         </button>
       </div>
@@ -68,43 +58,40 @@
       <div class="mb-4">
         <h3 class="text-lg font-semibold text-gray-700 mb-2">Common Symptoms</h3>
         <div class="flex flex-wrap gap-2">
-          <button onclick="addPredefinedSymptom('Headache')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Headache</button>
-          <button onclick="addPredefinedSymptom('Fever')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Fever</button>
-          <button onclick="addPredefinedSymptom('Cough')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Cough</button>
-          <button onclick="addPredefinedSymptom('Fatigue')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Fatigue</button>
-          <button onclick="addPredefinedSymptom('Nausea')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Nausea</button>
-          <button onclick="addPredefinedSymptom('Sore Throat')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Sore Throat</button>
-          <button onclick="addPredefinedSymptom('Shortness of Breath')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Shortness of Breath</button>
-          <button onclick="addPredefinedSymptom('Chest Pain')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Chest Pain</button>
-          <button onclick="addPredefinedSymptom('Diarrhea')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Diarrhea</button>
-          <button onclick="addPredefinedSymptom('Dizziness')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Dizziness</button>
-          <button onclick="addPredefinedSymptom('Loss of Smell')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Loss of Smell</button>
-          <button onclick="addPredefinedSymptom('Loss of Taste')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Loss of Taste</button>
-          <button onclick="addPredefinedSymptom('Runny Nose')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Runny Nose</button>
-          <button onclick="addPredefinedSymptom('Sneezing')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Sneezing</button>
-          <button onclick="addPredefinedSymptom('Muscle Pain')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Muscle Pain</button>
-          <button onclick="addPredefinedSymptom('Vomiting')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Vomiting</button>
-          <button onclick="addPredefinedSymptom('Back Pain')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">Back Pain</button>
+          <button onclick="addPredefinedSymptom('Headache')" class="symptom-tag">Headache</button>
+          <button onclick="addPredefinedSymptom('Fever')" class="symptom-tag">Fever</button>
+          <button onclick="addPredefinedSymptom('Cough')" class="symptom-tag">Cough</button>
+          <button onclick="addPredefinedSymptom('Fatigue')" class="symptom-tag">Fatigue</button>
+          <button onclick="addPredefinedSymptom('Nausea')" class="symptom-tag">Nausea</button>
+          <button onclick="addPredefinedSymptom('Sore Throat')" class="symptom-tag">Sore Throat</button>
+          <button onclick="addPredefinedSymptom('Shortness of Breath')" class="symptom-tag">Shortness of Breath</button>
+          <button onclick="addPredefinedSymptom('Chest Pain')" class="symptom-tag">Chest Pain</button>
+          <button onclick="addPredefinedSymptom('Diarrhea')" class="symptom-tag">Diarrhea</button>
+          <button onclick="addPredefinedSymptom('Dizziness')" class="symptom-tag">Dizziness</button>
+          <button onclick="addPredefinedSymptom('Loss of Smell')" class="symptom-tag">Loss of Smell</button>
+          <button onclick="addPredefinedSymptom('Loss of Taste')" class="symptom-tag">Loss of Taste</button>
+          <button onclick="addPredefinedSymptom('Runny Nose')" class="symptom-tag">Runny Nose</button>
+          <button onclick="addPredefinedSymptom('Sneezing')" class="symptom-tag">Sneezing</button>
+          <button onclick="addPredefinedSymptom('Muscle Pain')" class="symptom-tag">Muscle Pain</button>
+          <button onclick="addPredefinedSymptom('Back Pain')" class="symptom-tag">Back Pain</button>
         </div>
       </div>
 
       <!-- Selected Symptoms -->
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-gray-700 mb-2">Selected Symptoms</h3>
-        <div class="bg-gray-50 border border-gray-300 p-4 rounded-xl min-h-[48px]">
+        <div class="bg-gray-50 border border-gray-300 p-4 rounded-lg min-h-[48px]">
           <div id="selectedSymptoms" class="flex flex-wrap gap-2"></div>
           <p id="noSymptomsText" class="text-sm text-gray-500 mt-2">No symptoms selected yet.</p>
         </div>
       </div>
 
-      <!-- Buttons -->
+      <!-- Action Buttons -->
       <div class="flex flex-col sm:flex-row justify-between gap-4">
-        <button onclick="clearSymptoms()"
-                class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-xl w-full sm:w-auto">
+        <button onclick="clearSymptoms()" class="clear-btn py-2 px-4 rounded-lg w-full sm:w-auto">
           🗑️ Clear All
         </button>
-        <button onclick="getDiagnosis()"
-                class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-xl w-full sm:w-auto">
+        <button onclick="getDiagnosis()" class="diagnose-btn py-2 px-4 rounded-lg w-full sm:w-auto">
           🔍 Get Diagnosis
         </button>
       </div>
@@ -114,14 +101,13 @@
         <div class="loader border-blue-500 mx-auto w-8 h-8 border-4 border-dashed rounded-full animate-spin"></div>
         <p class="text-blue-600 mt-2">Analyzing symptoms...</p>
       </div>
-<!-- Diagnosis Result -->
-<div id="diagnosisResult"
-     class="mt-6 hidden bg-white border border-blue-300 p-4 rounded-xl text-gray-800 text-sm sm:text-base leading-relaxed space-y-4 shadow-md fade-in
-            max-h-[70vh] overflow-y-auto break-words
-            sm:max-h-full sm:overflow-visible">
-</div>
 
+      <!-- Diagnosis Output -->
+      <div id="diagnosisResult"
+           class="mt-6 hidden text-gray-800 text-sm sm:text-base leading-relaxed space-y-4 fade-in
+                  max-w-full w-full px-4 sm:px-8 break-words">
+      </div>
+    </div>
   </main>
-
 </body>
 </html>
