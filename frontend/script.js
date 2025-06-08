@@ -204,6 +204,7 @@ function getDiagnosis() {
     return;
   }
 
+  // Show the loading spinner
   document.getElementById("loadingSpinner").classList.remove("hidden");
   document.getElementById("diagnosisResult").classList.add("hidden");
 
@@ -214,26 +215,35 @@ function getDiagnosis() {
   })
     .then(res => res.json())
     .then(data => {
+      // Hide the spinner
       document.getElementById("loadingSpinner").classList.add("hidden");
+
       const resultBox = document.getElementById("diagnosisResult");
 
       if (data.response) {
-  const cleanResponse = data.response
-    .replace(/```html\s*/g, '')
-    .replace(/```/g, '');
-  resultBox.innerHTML = cleanResponse;
-  resultBox.classList.remove("hidden");
-  } else {
-        resultBox.innerHTML = "<div class='info-card'><h3>Error</h3><p>Sorry, no diagnosis could be generated.</p></div>";
-      }
+        const cleanResponse = data.response
+          .replace(/```html\s*/g, '')
+          .replace(/```/g, '');
 
-      resultBox.classList.remove("hidden");
+        // Set the response content
+        resultBox.innerHTML = cleanResponse;
+        resultBox.classList.remove("hidden");
+
+        // ✅ Auto-scroll to result after a short delay
+        setTimeout(() => {
+          resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100); // Slight delay ensures element is visible before scroll
+      } else {
+        resultBox.innerHTML = "<div class='info-card'><h3>Error</h3><p>Sorry, no diagnosis could be generated.</p></div>";
+        resultBox.classList.remove("hidden");
+      }
     })
     .catch(err => {
       alert("Error getting diagnosis: " + err);
       document.getElementById("loadingSpinner").classList.add("hidden");
     });
 }
+
 
 // ✅ Expose functions globally
 window.addSymptom = addSymptom;

@@ -4,108 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HALO - Healthcare AI Linked Operations</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="nav-bar">
-        <div class="nav-brand">
-            <h1><i class="fas fa-heartbeat"></i> HALO</h1>
-            <p class="brand-subtitle">Healthcare AI Linked Operations</p>
-        </div>
-        <div class="nav-buttons">
-            <button class="btn-primary" onclick="window.location.href='health.html'">
-                <i class="fas fa-user-circle"></i> My Profile
-            </button>
-        </div>
-    </nav>
 
+    <!-- =============== NAVIGATION BAR =============== -->
+
+        <nav class="nav-bar">
+
+            <!-- Left Side: HALO Logo and Title -->
+            <div class="nav-brand">
+                <h1><i class="fas fa-heartbeat"></i> HALO</h1>
+            </div>
+
+            <!-- Right Side: Profile Button -->
+            <div class="nav-buttons">
+                <button class="btn-primary" onclick="window.location.href='health.html'">
+                    <i class="fas fa-user-circle"></i> My Profile
+                </button>
+            </div>
+    
+        </nav>
+
+    <!-- =============== LEFT CONTAINER =============== -->
     <div class="main-container">
 
-        <!-- LEFT SLIDEBAR NAVIGATION -->
-        <div class="sidebar">
-    <div class="sidebar-services">
+    <!------ LEFT SLIDEBAR NAVIGATION ---------->
+    <div class="sidebar">
+
+        <div class="sidebar-services">
         
-        <!-- 1. Healthcare Chatbot -->
-        <button class="service-btn chatbot-btn" onclick="window.location.href='chatboat.html'"
-'">
-            <span class="icon"><i class="fas fa-robot"></i></span>
-            <div class="service-content">
-                <h3>Healthcare Chatbot</h3>
-                <p>24/7 AI-powered medical assistance</p>
-            </div>
-        </button>
+            <!-- 1. Healthcare Chatbot -->
+            <button class="service-btn chatbot-btn" onclick="window.location.href='chatboat.html'">
+                <span class="icon"><i class="fas fa-robot"></i></span>
+                <div class="service-content">
+                    <h3>Healthcare Chatbot</h3>
+                    <p>24/7 AI-powered medical assistance</p>
+                </div>
+            </button>
 
-        <!-- 2. Doctor Preference (Online) -->
-        <button class="service-btn doctor-btn" onclick="window.location.href='doctor.html'">
-            <span class="icon"><i class="fas fa-user-md"></i></span>
-            <div class="service-content">
-                <h3>Doctor Preference (Online)</h3>
-                <p>Select your preferred online doctor</p>
-            </div>
-        </button>
+            <!-- 2. Doctor Preference (Online) -->
+            <button class="service-btn doctor-btn" onclick="window.location.href='doctor.html'">
+                <span class="icon"><i class="fas fa-user-md"></i></span>
+                <div class="service-content">
+                    <h3>Doctor Preference (Online)</h3>
+                    <p>Select your preferred online doctor</p>
+                </div>
+            </button>
 
-        <!-- 3. Medicine Recognition -->
-        <button class="service-btn medicine-btn" onclick="window.location.href='medicine.html'">
-            <span class="icon"><i class="fas fa-pills"></i></span>
-            <div class="service-content">
-                <h3>Medicine Recognition</h3>
-                <p>Identify medications instantly</p>
-            </div>
-        </button>
+            <!-- 3. Medicine Recognition -->
+            <button class="service-btn medicine-btn" onclick="window.location.href='medicine.html'">
+                <span class="icon"><i class="fas fa-pills"></i></span>
+                <div class="service-content">
+                    <h3>Medicine Recognition</h3>
+                    <p>Identify medications instantly</p>
+                </div>
+            </button>
 
-        <!-- 4. EQ Assessment -->
-        <button class="service-btn eq-btn" onclick="window.location.href='eqtest.html'">
-            <span class="icon"><i class="fas fa-brain"></i></span>
-            <div class="service-content">
-                <h3>EQ Assessment</h3>
-                <p>Evaluate emotional intelligence</p>
-            </div>
-        </button>
+            <!-- 4. EQ Assessment -->
+            <button class="service-btn eq-btn" onclick="window.location.href='eqtest.html'">
+                <span class="icon"><i class="fas fa-brain"></i></span>
+                <div class="service-content">
+                    <h3>EQ Assessment</h3>
+                    <p>Evaluate emotional intelligence</p>
+                </div>
+            </button>
+
+        </div>
     </div>
-</div>
 
 
-        <!-- Main Content Area -->
+    <!-- =========== Healthcare AI Linked Operations =========== -->
         <div class="content">
-            <!-- Account Section -->
            
-<div class="account-section">
-<!-- Hero Section with Animation -->
-<div class="hero-banner">
-  <div class="hero-content">
-    <div class="hero-text">
-      <h2>Healthcare AI Linked Operations</h2>
+    <div class="hero-section">
+        <div class="hero-banner">
+          <div class="hero-content">
+            <div class="hero-text">
 
-      <lottie-player 
-        src="https://assets4.lottiefiles.com/packages/lf20_w51pcehl.json" 
-        background="transparent" 
-        speed="1" 
-        style="width: 260px; height: 200px;" 
-        loop 
-        autoplay>
-      </lottie-player>
+              <!-- Title  -->
+              <h2><i class="fas fa-heartbeat"></i> Healthcare AI Linked Operations</h2>
+               
+              <!-- Animation -->
+              <lottie-player 
+                src="https://assets4.lottiefiles.com/packages/lf20_w51pcehl.json" 
+                background="transparent" 
+                speed="1" 
+                style="width: 260px; height: 200px;" 
+                loop 
+                autoplay>
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+              </lottie-player>
 
-      <p>Experience AI-driven medical solutions at your fingertips.</p>
+              <!-- Discription -->
+              <p>Experience AI-driven medical solutions at your fingertips.</p>
+
+            </div>
+          </div>
+        </div>
     </div>
-  </div>
-</div>
-
-</div>
-
+         
+    <!-- ============ Your Health Overview ============ -->
 
             <!-- Health Information Section -->
             <div class="health-info">
+
                 <div class="health-header">
                     <h2><i class="fas fa-heartbeat"></i> Your Health Overview</h2>
-                    <div class="health-status">
-                    </div>
+                    <div class="health-status"></div>
                 </div>
                 
                 <div class="health-dashboard">
-                    <!-- Main Health Stats -->
-                    <div class="health-stats-container">
+
+                    <!-- Main Health Status -->
+                    <div class="whb-container">
+
+                        <!-- 1. Weight -->
                         <div class="health-stat-card primary">
                             <div class="stat-icon">
                                 <i class="fas fa-weight"></i>
@@ -113,11 +128,11 @@
                             <div class="stat-content">
                                 <h4>Weight</h4>
                                 <p class="stat-value" id="userWeight">Loading...</p>
-                                <div class="stat-trend positive">
-                                </div>
+                                <div class="stat-trend positive"></div>
                             </div>
                         </div>
 
+                        <!-- 2. Height -->
                         <div class="health-stat-card">
                             <div class="stat-icon">
                                 <i class="fas fa-ruler-vertical"></i>
@@ -130,6 +145,7 @@
                             </div>
                         </div>
 
+                        <!-- 3. Blood Type -->
                         <div class="health-stat-card">
                             <div class="stat-icon">
                                 <i class="fas fa-tint"></i>
@@ -137,193 +153,102 @@
                             <div class="stat-content">
                                 <h4>Blood Type</h4>
                                 <p class="stat-value" id="userBloodType">Loading...</p>
-                                <div class="stat-info">
-                                </div>
+                                <div class="stat-info"></div>
                             </div>
                         </div>
+
                     </div>
 
-                    <!-- Medical History Timeline -->
-                    <div class="medical-timeline">
-                        <h3><i class="fas fa-history"></i> Recent Medical History</h3>
-                        <div class="timeline-container" id="userConditions">
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-content">
-                                    <h4>Last Checkup</h4>
-                                    <p>Regular health examination completed</p>
-                                    <span class="timeline-date">2 weeks ago</span>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-content">
-                                    <h4>Vaccination</h4>
-                                    <p>Annual flu shot administered</p>
-                                    <span class="timeline-date">1 month ago</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- ========== Recent Medical History section ========== -->
+     
+        <!-- Shadow Cointainer for the Recent Medical History -->
+        <div class="recent-medical-history-card">
 
-                    <!-- Health Metrics Chart -->
-                    <div class="health-metrics">
-                        <h3><i class="fas fa-chart-line"></i> Health Metrics</h3>
-                        <div class="metrics-grid">
-                            <div class="metric-card">
-                                <div class="metric-header">
-                                    <h4>BMI</h4>
-                                    <span class="metric-value">22.5</span>
-                                </div>
-                                <div class="metric-indicator">
-                                    <div class="indicator-bar" style="width: 75%"></div>
-                                </div>
-                                <span class="metric-status">Normal</span>
-                            </div>
-                        </div>
+            <!-- Section Heading -->
+            <h3><i class="fas fa-history"></i> Recent Medical History</h3>
+
+            <!-- Timeline container to hold all medical history events -->
+            <div class="medical-history-timeline" id="userConditions">
+
+                <!-- 1. Event: Last Checkup -->
+                <div class="medical-history-event">
+                    <!-- Circular dot on the timeline -->
+                    <div class="event-dot"></div>
+                    <!-- Content for the event -->
+                    <div class="event-details">
+                        <h4>Last Checkup</h4>
+                        <p>Regular health examination completed</p>
+                        <span class="event-date">2 weeks ago</span>
                     </div>
                 </div>
+
+                <!-- 2. Event: Vaccination -->
+                <div class="medical-history-event">
+                    <!-- Circular dot on the timeline -->
+                    <div class="event-dot"></div>
+                    <!-- Content for the event -->
+                    <div class="event-details">
+                        <h4>Vaccination</h4>
+                        <p>Annual flu shot administered</p>
+                        <span class="event-date">1 month ago</span>
+                    </div>
+                </div>
+
             </div>
+        </div>
+           
 
-            <!-- Health Profile Form -->
 
-            <!-- Service Descriptions -->
-            <div class="service-descriptions">
-                <div class="service-description">
-                    <h3><i class="fas fa-robot"></i> Healthcare Chatbot</h3>
-                    <p>Our AI-powered chatbot provides instant medical guidance, symptom analysis, and healthcare recommendations. Available 24/7, it offers reliable preliminary medical advice while maintaining complete privacy.</p>
+        <!-- ============= Health Metrics Chart ============= -->
+
+            <!-- Shadow Cointainer for the Health Metrics -->
+            <div class="health-metrics">
+
+            <!-- Section Heading -->
+            <h3><i class="fas fa-chart-line"></i> Health Metrics</h3>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <h4>BMI</h4>
+                            <span class="metric-value">22.5</span>
+                        </div>
+                        <div class="metric-indicator">
+                            <div class="indicator-bar" style="width: 75%"></div>
+                        </div>
+                        <span class="metric-status">Normal</span>
+                    </div>
                 </div>
 
-                <div class="service-description">
-                    <h3><i class="fas fa-pills"></i> Medicine Recognition</h3>
-                    <p>Advanced medicine identification system that helps you recognize medications, understand their uses, proper dosage, and potential side effects. Simply upload a photo of your medication for instant information.</p>
-                </div>
-
-                <div class="service-description">
-                    <h3><i class="fas fa-brain"></i> EQ Assessment</h3>
-                    <p>Professional emotional intelligence evaluation tool that helps assess and improve your emotional awareness, empathy, and social skills. Get personalized insights and development recommendations.</p>
-                </div>
             </div>
         </div>
     </div>
 
-    <script>
-        // Function to load user health data
-        async function loadUserHealth() {
-            try {
-                // First try to load from localStorage
-                const localData = localStorage.getItem('healthData');
-                if (localData) {
-                    const data = JSON.parse(localData);
-                    updateHealthDisplay(data);
-                }
+        <!-- ============ Service Descriptions ============ -->
 
-                // Then try to load from API
-                const response = await fetch('/api/user-health');
-                if (response.ok) {
-                    const data = await response.json();
-                    updateHealthDisplay(data);
-                    // Store in localStorage for offline access
-                    localStorage.setItem('healthData', JSON.stringify(data));
-                }
-            } catch (error) {
-                console.error('Error loading health data:', error);
-            }
-        }
+            <div class="service-descriptions">
 
-        function updateHealthDisplay(data) {
-            if (data.user) {
-                document.getElementById('userName').textContent = `Welcome Back, ${data.user.name}`;
-                document.getElementById('userEmail').textContent = data.user.email;
-                document.getElementById('profilePic').src = data.user.profilePic || 'https://via.placeholder.com/60';
-            }
-
-            if (data.health) {
-                document.getElementById('userWeight').textContent = `${data.health.weight} kg`;
-                document.getElementById('userHeight').textContent = `${data.health.height} cm`;
-                document.getElementById('userBloodType').textContent = data.health.bloodType;
-            }
-
-            if (data.conditions) {
-                const conditionsContainer = document.getElementById('userConditions');
-                conditionsContainer.innerHTML = '';
+                <!-- Healthcare Chatbot Descriptions -->
+                <div class="service-description">
+                    <h3><i class="fas fa-robot"></i> Healthcare Chatbot</h3>
+                    <p>Our AI-powered chatbot provides instant medical guidance, symptom analysis, and healthcare recommendations. Available 24/7, it offers reliable preliminary medical advice while maintaining complete privacy.</p>
+                </div>
+              
+                <!-- Medicine Recognition Descriptions -->
+                <div class="service-description">
+                    <h3><i class="fas fa-pills"></i> Medicine Recognition</h3>
+                    <p>Advanced medicine identification system that helps you recognize medications, understand their uses, proper dosage, and potential side effects. Simply upload a photo of your medication for instant information.</p>
+                </div>
+              
+                <!-- EQ Assessment Description -->
+                <div class="service-description">
+                    <h3><i class="fas fa-brain"></i> EQ Assessment</h3>
+                    <p>Professional emotional intelligence evaluation tool that helps assess and improve your emotional awareness, empathy, and social skills. Get personalized insights and development recommendations.</p>
+                </div>
                 
-                data.conditions.forEach(condition => {
-                    const item = document.createElement('div');
-                    item.className = 'timeline-item';
-                    item.innerHTML = `
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h4>${condition.name}</h4>
-                            <p>${condition.description}</p>
-                            <span class="timeline-date">${condition.date}</span>
-                        </div>
-                    `;
-                    conditionsContainer.appendChild(item);
-                });
-            }
-        }
+            </div>
+        </div>
+    </div>
 
-        document.getElementById('healthForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(e.target);
-            const weight = formData.get('weight');
-            const height = formData.get('height');
-            const bloodType = formData.get('bloodType');
-
-            // Update health stats display
-            document.getElementById('userWeight').textContent = weight ? `${weight} kg` : 'Loading...';
-            document.getElementById('userHeight').textContent = height ? `${height} cm` : 'Loading...';
-            document.getElementById('userBloodType').textContent = bloodType || 'Loading...';
-
-            // Save to local storage
-            const healthData = {
-                weight,
-                height,
-                bloodType
-            };
-            localStorage.setItem('healthData', JSON.stringify(healthData));
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            loadUserHealth();
-        });
-
-        function loadUserHealth() {
-            const localData = localStorage.getItem('healthData');
-            if (localData) {
-                const data = JSON.parse(localData);
-                document.getElementById('userWeight').textContent = data.weight ? `${data.weight} kg` : 'Loading...';
-                document.getElementById('userHeight').textContent = data.height ? `${data.height} cm` : 'Loading...';
-                document.getElementById('userBloodType').textContent = data.bloodType || 'Loading...';
-            }
-        }
-
-        // Function to update health display from profile
-        function updateHealthFromProfile(profileData) {
-            document.getElementById('userWeight').textContent = profileData.weight ? `${profileData.weight} kg` : 'Loading...';
-            document.getElementById('userHeight').textContent = profileData.height ? `${profileData.height} cm` : 'Loading...';
-            document.getElementById('userBloodType').textContent = profileData.bloodType || 'Loading...';
-        }
-
-        // Example usage: assuming profileData is obtained from health.html
-        const profileData = {
-            weight: '70',
-            height: '175',
-            bloodType: 'O+'
-        };
-        updateHealthFromProfile(profileData);
-
-        // Add smooth scroll behavior
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
 </html>
