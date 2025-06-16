@@ -311,16 +311,17 @@ h1::after, h2::after {
 }
 
 .info-card {
-    background: white;
+    background: transparent; /* Removed white */
     padding: 2rem;
     border-radius: 8px;
     margin-bottom: 2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: none; /* Removed shadow */
     transition: transform 0.3s ease;
     position: relative;
     z-index: 1;
-    border: 1px solid var(--border);
+    border: none; /* Removed border */
 }
+
 
 .info-card:hover {
     transform: translateY(-3px);
@@ -898,5 +899,27 @@ button:active {
     line-height: 1.6;
   }
 }
+
+#diagnosisResult {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  word-break: break-word;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  margin: 0 auto;
+}
+
+.info-card ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
 
 
